@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Atividade: Formulário e Validação 3</h1>
+        <p>Criar este site, com os formulários abaixo e com validação simples, utilizando HTML, CSS e JavaScript.</p>
+        <p>Link do tutorial abaixo:</p>
+        <a href="https://www.javatpoint.com/javascript-form-validation" target="_blank">
+            Form Validation JavaScript
+        </a>
+    </header>
+
+    <form name="myform" method="post" action="abc.jsp" onsubmit="return validateform()" >  
+        <h2>Validação: Nome e senha</h2>
+        Name: <input type="text" name="name"><br/>  
+        Password: <input type="password" name="password"><br/>  
+        <input type="submit" value="register">  
+    </form>
+
+    <form name="f1" action="register.jsp" onsubmit="return matchpass()"> 
+        <h2>Validação: Senha de cima precisa ser igual a de baixo</h2> 
+        Password: <input type="password" name="password" /><br/>  
+        Re-enter Password: <input type="password" name="password2"/><br/>  
+        <input type="submit">  
+    </form>
+
+    <form name="myform2" onsubmit="return validate()" >
+        <h2>Validação: Numero</h2>
+        Number: <input type="text" name="num"><span id="numloc"></span><br/>  
+        <input type="submit" value="submit">  
+    </form>
+
+    <form name="f2" action="#" onsubmit="return validate2()">
+        <h2>Validação: Com imagem</h2>
+        <table>  
+            <tr>
+                <td>Enter Name:</td>
+                <td><input type="text" name="name"/>  <span id="nameloc"></span></td>
+            </tr>  
+            <tr>
+                <td>Enter Password:</td>
+                <td><input type="password" name="password"/>  <span id="passwordloc"></span></td>
+            </tr>  
+            <tr>
+                <td colspan="2"><input type="submit" value="register"/></td>
+            </tr>  
+        </table> 
+    </form>
+
+    <form name="myform3"  method="post" action="#" onsubmit="return validateemail();">  
+        <h2>Validação: Email</h2>
+        Email: <input type="text" name="email"><br/>  
+        <input type="submit" value="register">  
+    </form>
+
+    <script src="script.js"></script>
+</body>
+</html>
